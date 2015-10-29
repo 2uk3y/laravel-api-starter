@@ -24,6 +24,12 @@ $api->version('v1', function ($api) {
 			$api->delete('dogs/{id}', 'DogsController@destroy');
 			$api->put('dogs/{id}', 'DogsController@update');
 
+			$api->get('premises', 'PremisesController@index');
+			$api->post('premises', 'PremisesController@store');
+			$api->get('premises/{id}', 'PremisesController@show');
+			$api->delete('premises/{id}', 'PremisesController@destroy');
+			$api->put('premises/{id}', 'PremisesController@update');
+
 		});
 
 	});
